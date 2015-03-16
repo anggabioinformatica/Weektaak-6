@@ -2,9 +2,8 @@
 
 def main():
     naam = "sequence_pep.gb"
-    sequentie = leesBestand(naam)
-    print (sequentie)
-   # gcPercentage = bepaalGCpercentage(sequentie)
+    sequence = leesBestand(naam)
+    gcPercentage = bepaalGCpercentage(sequence)
     #schrijfHTMLrapport(gcPercentage, sequentie, bestandsnaam)
     
 
@@ -21,7 +20,18 @@ def leesBestand(bestandsnaam):
     return sequence
 
 
-#def bepaalGCpercentage(sequentie):
+def bepaalGCpercentage(sequence):
+    x = sequence.upper()
+    total = len(x)
+    print (total)
+    c = x.count("C")
+    print (c)
+    g = x.count("G")
+    print (g)
+    gc_total = g+c
+    print (gc_total)
+    gc_perc = gc_total / total
+    print (gc_perc)
 
 
 #def schrijfHTMLrapport (gcPercentage, sequentie, bestandsnaam):
