@@ -6,6 +6,7 @@ def main():
     print(sequence,"\n")
     gcPercentage = bepaalGCpercentage(sequence)
     #schrijfHTMLrapport(gcPercentage, sequentie, bestandsnaam)
+    #JOELS SHIT
 
 def leesBestand(bestandsnaam):
     bestand = open(bestandsnaam)
@@ -35,5 +36,6 @@ def bepaalGCpercentage(sequence):
 
 
 #def schrijfHTMLrapport (gcPercentage, sequentie, bestandsnaam):
+##    JOEL MOFO, THIS IS YOUR SHIT
 
 main()
