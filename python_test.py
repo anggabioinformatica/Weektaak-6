@@ -2,19 +2,23 @@
 
 def main():
     naam = "sequence_pep.gb"
-    leesBestand(naam)
+    sequentie = leesBestand(naam)
+    print (sequentie)
    # gcPercentage = bepaalGCpercentage(sequentie)
     #schrijfHTMLrapport(gcPercentage, sequentie, bestandsnaam)
     
 
 def leesBestand(bestandsnaam):
     bestand = open(bestandsnaam)
+    raw_data = ""
     lees = False
     for regel in bestand:
         if "ORIGIN" in regel:
             lees = True
         if lees == True:
-            print (regel)
+            raw_data += regel[10:]
+    sequence = raw_data.replace(" ", "").replace("\n", "").replace("\r", "")
+    return sequence
 
 
 #def bepaalGCpercentage(sequentie):
